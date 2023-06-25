@@ -1,12 +1,11 @@
 ﻿using Ali_ECommerce.Models;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity;
-using System.Linq;
 using System.Net;
-using System.Web.Http.Description;
 using System.Web.Http;
-
-
+using System.Web.Http.Description;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Ali_ECommerce.Controllers
 {
@@ -102,6 +101,23 @@ namespace Ali_ECommerce.Controllers
         private bool UserMerchantExists(int id)
         {
             return db.Merchants.Count(e => e.MerchantID == id) > 0;
+        }
+
+        // GET: api/UserMerchantData/ListUserMerchantDtos
+        [HttpGet]
+        public IEnumerable<MerchantDto> ListUserMerchantDtos()
+        {
+            List<Merchant> merchants = db.Merchants.ToList();
+            List<MerchantDto> merchantDtos = new List<MerchantDto>();
+
+            merchants.ForEach(m => merchantDtos.Add(new MerchantDto()
+            {
+                MerchantID = m.MerchantID,
+                MerchantName = m.MerchantName,
+                MerchantBusiness = m.MerchantBusiness
+            }));
+
+            return merchantDtos;
         }
     }
 }

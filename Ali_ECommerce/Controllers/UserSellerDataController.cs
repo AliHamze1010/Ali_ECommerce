@@ -5,6 +5,7 @@ using System.Net;
 using System.Web.Http;
 using System.Web.Http.Description;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Ali_ECommerce.Controllers
 {
@@ -100,6 +101,23 @@ namespace Ali_ECommerce.Controllers
         private bool UserSellerExists(int id)
         {
             return db.UserSellers.Count(e => e.UserSellerID == id) > 0;
+        }
+
+        // GET: api/UserSellerData/ListUserSellerDtos
+        [HttpGet]
+        public IEnumerable<UserSellerDto> ListUserSellerDtos()
+        {
+            List<UserSeller> userSellers = db.UserSellers.ToList();
+            List<UserSellerDto> userSellerDtos = new List<UserSellerDto>();
+
+            userSellers.ForEach(us => userSellerDtos.Add(new UserSellerDto()
+            {
+                UserSellerID = us.UserSellerID,
+                UserSellerName = us.UserSellerName,
+                UserSellerBusiness = us.UserSellerBusiness
+            }));
+
+            return userSellerDtos;
         }
     }
 }

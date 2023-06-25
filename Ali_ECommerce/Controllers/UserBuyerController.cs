@@ -3,11 +3,11 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 
-public class UserBuyersController : Controller
+public class UserBuyerController : Controller
 {
     private ApplicationDbContext _context;
 
-    public UserBuyersController()
+    public UserBuyerController()
     {
         _context = new ApplicationDbContext();
     }

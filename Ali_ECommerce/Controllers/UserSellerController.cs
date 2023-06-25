@@ -56,5 +56,20 @@ namespace Ali_ECommerce.Controllers
 
             return View(userSeller);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(UserSeller userSeller)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Entry(userSeller).State = EntityState.Modified;
+                _context.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+
+            return View(userSeller);
+        }
     }
 }
