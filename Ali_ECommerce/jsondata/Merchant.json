@@ -1,0 +1,17 @@
+﻿[
+	{
+		"MerchantID": 1,
+		"MerchantName": "Johnny Jeans",
+		"OwnerName": "John Kennedy"
+	},
+	{
+		"MerchantID": 2,
+		"MerchantName": "Zoey's Boutique",
+		"OwnerName": "Zoey Matt"
+	},
+	{
+		"MerchantID": 3,
+		"MerchantName": "MoeMoney Clothing",
+		"OwnerName": "Moe"
+	}
+]

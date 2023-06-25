@@ -1,0 +1,44 @@
+﻿[
+  {
+    "UserBuyerID": 1,
+    "UserBuyerName": "John Doe",
+    "FirstName": "John",
+    "MerchantID": 1
+  },
+  {
+    "UserBuyerID": 2,
+    "UserBuyerName": "Jane Smith",
+    "FirstName": "Jane",
+    "MerchantID": 2
+  },
+  {
+    "UserBuyerID": 3,
+    "UserBuyerName": "Ali Hamze",
+    "FirstName": "Ali",
+    "MerchantID": 1
+  },
+  {
+    "UserBuyerID": 4,
+    "UserBuyerName": "Rachel Green",
+    "FirstName": "Rachel",
+    "MerchantID": 2
+  },
+  {
+    "UserBuyerID": 5,
+    "UserBuyerName": "Monica Geller",
+    "FirstName": "Monica",
+    "MerchantID": 3
+  },
+  {
+    "UserBuyerID": 6,
+    "UserBuyerName": "Mike Ross",
+    "FirstName": "Mike",
+    "MerchantID": 3
+  },
+  {
+    "UserBuyerID": 7,
+    "UserBuyerName": "Harvey Specter",
+    "FirstName": "Harvey",
+    "MerchantID": 1
+  }
+]

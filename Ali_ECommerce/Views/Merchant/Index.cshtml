@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Ali_ECommerce.Models.MerchantDto>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<a href="/Merchant/Create">Add New Merchant</a>
+
+@foreach (var merchant in Model)
+{
+    <h2>@merchant.MerchantName</h2>
+    <div>Business: @merchant.MerchantBusiness</div>
+    <br />
+}

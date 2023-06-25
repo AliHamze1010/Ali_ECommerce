@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Ali_ECommerce.Models.UserBuyerDto>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<a href="/UserBuyer/Create">Add New UserBuyer</a>
+@foreach (var userbuyer in Model)
+{
+    <h2><a href="/UserBuyer/Details/@userbuyer.UserBuyerID">@userbuyer.UserBuyerName</a></h2>
+    <div>Merchandise Product: @userbuyer.MerchantBusiness</div>
+}

@@ -1,0 +1,12 @@
+﻿@model Ali_ECommerce.Models.MerchantDto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<h3>@Model.MerchantName</h3>
+<div>Business: @Model.MerchantBusiness</div>
+<br />
+@Html.ActionLink("Back to List", "Index")

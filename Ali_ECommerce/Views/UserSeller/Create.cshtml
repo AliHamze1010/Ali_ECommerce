@@ -1,0 +1,32 @@
+﻿@model Ali_ECommerce.Models.UserSeller
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create User Seller</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.UserSellerName)
+        @Html.EditorFor(model => model.UserSellerName, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.UserSellerName, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.UserSellerBusiness)
+        @Html.EditorFor(model => model.UserSellerBusiness, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.UserSellerBusiness, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
